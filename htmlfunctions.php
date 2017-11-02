@@ -43,11 +43,11 @@ $navbar = '<!-- Navigation -->
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Over</a>
+              <a class="nav-link" href="over.php">Over</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
+              <a class="nav-link" href="contact.php">Contact</a>
+            </li> 
 			<li class="nav-item">
 			<a class="nav-link" href="#" role="button" data-toggle="modal" data-target="#login-modal">Login</a>
           </ul>
