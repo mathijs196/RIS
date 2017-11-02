@@ -1,24 +1,43 @@
-<!-- LOGIN.php
+<!-- LOGIN_CONTROLE.PHP
 
 ERIK SMITH
 
 FUNCTIES:
-- Form met als action de login_controle.php
-- Input gebruikersnaam en wachtwoord
-- Aantal vereisten aan gebruikersnaam en wachtwoord
-- Submit 
+- Er wordt een sessie gestart
+- Database connectie bestand wordt geinclude 
+- Controle of de pagina correct is aangeroepen
+- Controle gebruikersnaam en wachtwoord
+- Controle geslaagd? -> ingelogd.
 
 -->
 
-<h1> inlogformulier </h1>
+<?php
+session_start(); 
+include ('../inc/db_connect.php');
 
 
-	<form method="post" action="login_controle.php">
-	<table>
-	<tr><td>Gebruikersnaam:</td><td> <input name="emailadres" type="text"  size="20" ></td></tr>
-	<tr><td>Wachtwoord: </td><td><input name="wachtwoord" type="password" size="20" maxlength="20"></td></tr>
-	</table>
-	<br>
-	<input type="submit" name="Submit" value="Inloggen">
-	<input name="reset" type="reset" id="reset" value="Leegmaken">
-	</form>
+if (!empty($_POST)){
+	
+	$emailadres = mysqli_real_escape_string($db, $_POST['emailadres']);
+	$wachtwoord = mysqli_real_escape_string($db, $_POST['wachtwoord']);
+	$query = 	"SELECT * FROM gebruiker 
+				WHERE emailadres ='" . $_POST["emailadres"] ."'
+				AND wachtwoord='" . $_POST["wachtwoord"] ."'"; 
+	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
+		
+	if (mysqli_num_rows($result) > 0){
+				$_SESSION["auth"]=true;
+				$_SESSION["timeout"]=time() + 120; 
+				$_SESSION["emailadres"]=$emailadres;
+		while($row = mysqli_fetch_assoc($result)) {
+		echo "Je bent nu ingelogd als: ". $row['naam']. " ". $row['tussenvoegsel'] . " ". $row['achternaam'];
+	}
+	
+}else{
+  	$melding = "Opgegeven gebruikersnaam en/of wachtwoord incorrect";
+			die($melding);
+		}
+}else{
+	
+}
+?>
