@@ -5,7 +5,7 @@ ERIK SMITH
 FUNCTIES:
 - Account aan kunnen maken
 - Gegevens worden in de database gezet
-- Per 'Categorie' ingedeeld
+- Per 'Categorie' ingedeeld d.m.v. fieldset
 
 -->
 
