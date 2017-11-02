@@ -30,6 +30,7 @@ if (!empty($_POST)){
 				$_SESSION["timeout"]=time() + 120; 
 				$_SESSION["emailadres"]=$emailadres;
 		while($row = mysqli_fetch_assoc($result)) {
+		echo "Je bent nu ingelogd als: ". $row['naam']. " ". $row['tussenvoegsel'] . " ". $row['achternaam'];
 	}
 	
 }else{
