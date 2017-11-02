@@ -2,7 +2,7 @@
 <?php
 function navbar(){
 $navbar = '<!-- Navigation -->
-=======
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +27,7 @@ $navbar = '<!-- Navigation -->
   <body>
 
     <!-- Navigation -->
->>>>>>> f0bd11478a19ed1d96d27f49c65a58dad87192c0:index.html
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#"><img src="img/logo.png" style="display: inline-block; height: 100px; width: 100px;"></a>
