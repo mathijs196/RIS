@@ -15,7 +15,7 @@ FUNCTIES:
 
 	<form method="post" action="login_controle.php">
 	<table>
-	<tr><td>Gebruikersnaam:</td><td> <input name="gebruikersnaam" type="text"  size="20" ></td></tr>
+	<tr><td>Gebruikersnaam:</td><td> <input name="emailadres" type="text"  size="20" ></td></tr>
 	<tr><td>Wachtwoord: </td><td><input name="wachtwoord" type="password" size="20" maxlength="20"></td></tr>
 	</table>
 	<br>

@@ -12,40 +12,29 @@ FUNCTIES:
 -->
 
 <?php
-session_start(); // sessie beginnen
-include ('');
+session_start(); 
+include ('../inc/db_connect.php');
 
-// controleren of pagina correct is aangeroepen.
+
 if (!empty($_POST)){
 	
-	$gebruiker = mysqli_real_escape_string($db, $_POST['gebruikersnaam']);
+	$emailadres = mysqli_real_escape_string($db, $_POST['emailadres']);
 	$wachtwoord = mysqli_real_escape_string($db, $_POST['wachtwoord']);
-	$query = 	"SELECT * FROM users 
-				WHERE gebruikersnaam ='" . $_POST["gebruikersnaam"] ."'
+	$query = 	"SELECT * FROM gebruiker 
+				WHERE emailadres ='" . $_POST["emailadres"] ."'
 				AND wachtwoord='" . $_POST["wachtwoord"] ."'"; 
 	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
 		
 	if (mysqli_num_rows($result) > 0){
-        // gebruikersnaam gevonden, registreer gegevens in session
-				$_SESSION["auth"]=true; //auth controleert of een klant is ingelogd
+				$_SESSION["auth"]=true;
 				$_SESSION["timeout"]=time() + 120; 
-				$_SESSION["gebruiker"]=$gebruiker;
+				$_SESSION["emailadres"]=$emailadres;
 		while($row = mysqli_fetch_assoc($result)) {
-		$rol = $row['rol'];
-	}
-		// Doorsturen naar beveiligde pagina
-	if(($rol) == "admin") {
-        header("Location: admin.php"); 
-        exit(); 
-	}
-	elseif(($rol =="medewerker")) {
-		header("Location: medewerker.php"); 
-        exit(); 
 	}
 	
 }else{
-  	$tekst = "Gebruikersnaam en/of wachtwoord incorrect";
-			die($tekst);
+  	$melding = "Opgegeven gebruikersnaam en/of wachtwoord incorrect";
+			die($melding);
 		}
 }else{
 	
