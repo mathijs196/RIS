@@ -74,6 +74,7 @@ include 'page/layout_footer.php';
     <div class="container">
 <div class="row">	
 		<div class="col-lg-3">
+		<?php include 'page/form_login.php' ?>
           <h1 class="my-4">RIS webshop</h1>
           <div class="list-group">
             <a href="#" class="list-group-item active">Category 1</a>

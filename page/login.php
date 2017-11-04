@@ -12,8 +12,8 @@ FUNCTIES:
 -->
 
 <?php
-session_start(); 
-include ('../inc/db_connect.php');
+
+include ('inc/db_connect.php');
 
 
 if (!empty($_POST)){
@@ -24,13 +24,16 @@ if (!empty($_POST)){
 				WHERE emailadres ='" . $_POST["emailadres"] ."'
 				AND wachtwoord='" . $_POST["wachtwoord"] ."'"; 
 	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
-		
+	
 	if (mysqli_num_rows($result) > 0){
 				$_SESSION["auth"]=true;
 				$_SESSION["timeout"]=time() + 120; 
 				$_SESSION["emailadres"]=$emailadres;
+				
 		while($row = mysqli_fetch_assoc($result)) {
 		echo "Je bent nu ingelogd als: ". $row['naam']. " ". $row['tussenvoegsel'] . " ". $row['achternaam'];
+		$_SESSION["naam"]=$row['naam'];
+		header('Location:?page=home');
 	}
 	
 }else{
