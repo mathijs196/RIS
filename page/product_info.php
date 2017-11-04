@@ -7,51 +7,50 @@ FUNCTIES:
 
 -->
 
-<div style="border: 1px solid; width: 600px; height: 500px;; padding-left: 5px;">
-		<?php 
-		include ('../inc/db_connect.php');
-
-			if(!empty($_GET)){
-				$productid = $_GET['product'];
-
-				$query = 	"SELECT * FROM producten 
-							WHERE idproducten ='" . $_GET['product'] ."'"; 
-				$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
-				
-				while($row = mysqli_fetch_assoc($result)){
-					
-		?>
-	<h1> <?php echo $row['naam']; ?></h1>
-	<img src="../img/<?php echo $row['idproducten'] ?>.png" style="width: 200px; height: 100px; border: 1px solid; float: left; ">
-	<table style="float: left; margin-left: 10px; width: 295px;">
-	<tr><td><?php echo "<b>&euro; ". $row['prijs'].",00 </b>" ?></td></tr>
-	<tr><td><?php 
-	$voorraad = $row['hoeveelheid'];
-		if($voorraad == 0){
-		echo "<i>Levertijd onbekend</i>";
-		}elseif($voorraad > 0 ){
-		echo "Levertijd: 1 tot 2 werkdagen";
-		}
-
-	?></td></tr>
-	<tr><td><button>Winkelwagen</button></td></tr>
-
-	</table>
-		<div style="float: left; width: 550px;">
-			<h3>Omschrijving</h3>
-			<?php echo $row['omschrijving'];?>
-		</div>
-		<div style="float: left; width: 550px;">
-			<h3>Specificaties</h3>
-			<?php echo $row['specificaties'];?>
-		</div>
-</div>
-
-
 
 <?php 
-		}
-	}else {
-	}
-	mysqli_close($db);
-?>
+include ('inc/db_connect.php');
+
+?>			
+
+
+        
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+          <div class="card mt-4">
+            <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+            <div class="card-body">
+              <h3 class="card-title">Product Name</h3>
+              <h4>$24.99</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+              <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+              4.0 stars
+            </div>
+          </div>
+          <!-- /.card -->
+
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+              Product Reviews
+            </div>
+            <div class="card-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+              <hr>
+              <a href="#" class="btn btn-success">Leave a Review</a>
+            </div>
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>

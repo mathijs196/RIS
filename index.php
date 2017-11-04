@@ -62,6 +62,9 @@ include 'page/layout_footer.php';
             <li class="nav-item">
               <a class="nav-link" href="?page=contact">Contact</a>
             </li>
+			<li class="nav-item">
+              <a class="nav-link" href="?page=product_info">Productpagina (test)</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -69,6 +72,15 @@ include 'page/layout_footer.php';
 
     <!-- Page Content -->
     <div class="container">
+<div class="row">	
+		<div class="col-lg-3">
+          <h1 class="my-4">RIS webshop</h1>
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Category 1</a>
+            <a href="#" class="list-group-item">Category 2</a>
+            <a href="#" class="list-group-item">Category 3</a>
+          </div>
+        </div>
 	<?php 
 		if(!empty($_GET)){
 		$page = $_GET['page'];
