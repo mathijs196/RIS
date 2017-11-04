@@ -11,6 +11,15 @@ FUNCTIES:
 <?php 
 include ('inc/db_connect.php');
 
+		if(!empty($_GET)){
+				$productid = $_GET['product'];
+
+				$query = 	"SELECT * FROM producten 
+							WHERE idproducten ='" . $_GET['product'] ."'"; 
+				$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
+				
+				while($row = mysqli_fetch_assoc($result)){
+					
 ?>			
 
 
@@ -20,32 +29,32 @@ include ('inc/db_connect.php');
         <div class="col-lg-9">
 
           <div class="card mt-4">
-            <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+            <img class="card-img-top img-fluid" src="img/<?php echo $row['afbeelding'] ?>.png" alt="">
             <div class="card-body">
-              <h3 class="card-title">Product Name</h3>
-              <h4>$24.99</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-              <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-              4.0 stars
+              <h3 class="card-title"><?php echo $row['naam'] ?></h3>
+              <h4>&euro;<?php echo $row['prijs'] ?>,00</h4>
+              <p class="card-text">Op voorraad</p>
+			  <button class="btn btn-success">In winkelwagen</button>
+              
+              
             </div>
           </div>
           <!-- /.card -->
 
           <div class="card card-outline-secondary my-4">
             <div class="card-header">
-              Product Reviews
+              Omschrijving
             </div>
             <div class="card-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-              <hr>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-              <hr>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-              <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-              <hr>
-              <a href="#" class="btn btn-success">Leave a Review</a>
+              <?php echo $row['omschrijving'] ?>
+            </div>
+          </div>
+		  <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+              Specificaties
+            </div>
+            <div class="card-body">
+              <?php echo $row['specificaties'] ?>
             </div>
           </div>
           <!-- /.card -->
@@ -54,3 +63,10 @@ include ('inc/db_connect.php');
         <!-- /.col-lg-9 -->
 
       </div>
+ <?php 
+		}
+	}else {
+	}
+	mysqli_close($db);
+
+?>		
