@@ -52,8 +52,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
 		$query = ("INSERT INTO gebruiker (naam, tussenvoegsel, achternaam, emailadres, wachtwoord, postcode, woonplaats, straat, straatnummer, toevoegsel, admin)
 		VALUES('$naam','$tussenvoegsel','$achternaam','$email', '$wachtwoord', '$postcode', '$woonplaats', '$straat', '$straatnummer', '$toevoegsel', '$admin')") or die (mysqli_error());
 		$result = mysqli_query($db, $query);
-		echo("De gegevens zijn succesvol opgeslagen in de database:<br>\n");
-		echo("<hr> <a href=\"?page=home\">Naar het inlogscherm</a>");
+		echo("Uw account is aangemaakt!");
+		
 	}
 }
 ?>
