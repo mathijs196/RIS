@@ -29,7 +29,7 @@ include ('inc/db_connect.php');
         <div class="col-lg-9">
 
           <div class="card mt-4">
-            <img class="card-img-top img-fluid" src="img/<?php echo $row['afbeelding'] ?>.png" alt="">
+            <img class="card-img-top img-fluid" src="img/<?php echo $row['afbeelding'] ?>.png" style="height: 500px; width: 500px;" alt="">
             <div class="card-body">
               <h3 class="card-title"><?php echo $row['naam'] ?></h3>
               <h4>&euro;<?php echo $row['prijs'] ?>,00</h4>
