@@ -1,23 +1,4 @@
-<!--
-// start sessie
-session_start();
-
-include 'inc/db_connect.php';
-
-//Set pagina titel
-$page_title="Products";
-
-include 'page/layout_nav.php';
- 
-// pagina header html
-include 'page/layout_header.php';
- 
-// hier komt de content
- 
-// footer layout code
-include 'page/layout_footer.php';
-?>
--->
+<?php include 'inc/db_connect.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,9 +58,12 @@ include 'page/layout_footer.php';
 		<?php include 'page/form_login.php' ?>
           <h1 class="my-4">RIS webshop</h1>
           <div class="list-group">
+		 
+		
             <a href="#" class="list-group-item active">Category 1</a>
             <a href="#" class="list-group-item">Category 2</a>
             <a href="#" class="list-group-item">Category 3</a>
+			
           </div>
         </div>
 	<?php 

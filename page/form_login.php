@@ -21,12 +21,12 @@ FUNCTIES:
 	?>
 	<form method="post" action="?page=login">
 	<table>
-	<tr><td>Gebruikersnaam:</td><td> <input name="emailadres" type="text"  size="15" ></td></tr>
+	<tr><td>Emailadres:</td><td> <input name="emailadres" type="text"  size="15" ></td></tr>
 	<tr><td>Wachtwoord: </td><td><input name="wachtwoord" type="password" size="15" maxlength="20"></td></tr>
 	</table>
 	<br>
-	<input type="submit" name="Submit" value="Inloggen">
-	<input name="reset" type="reset" id="reset" value="Leegmaken">
+	<input class="btn btn-success" type="submit" name="Submit" value="Inloggen">
+	<input class="btn btn-success" name="reset" type="reset" id="reset" value="Leegmaken">
 	</form>
 	<?php 
 	}
