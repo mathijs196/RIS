@@ -18,7 +18,7 @@ while($row = mysqli_fetch_assoc($result)){
                   <p class="card-text"><?php echo $row['omschrijving'] ?></p>
                 </div>
                 <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <button class="btn btn-success">In winkelwagen</button>
                 </div>
               </div>
             </div>
