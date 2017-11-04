@@ -46,6 +46,9 @@
 			<li class="nav-item">
               <a class="nav-link" href="?page=product_info&product=1">Productpagina (test)</a>
             </li>
+			<li class="nav-item">
+              <a class="nav-link" href="?page=register">Registeren</a>
+            </li>
           </ul>
         </div>
       </div>
