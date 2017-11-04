@@ -10,13 +10,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <title>Ricks Interdimensional Shop | RIS</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/shop-homepage.css" rel="stylesheet">
+	<link href="css/contact.css" rel="stylesheet">
+	
 
   </head>
 
@@ -43,9 +45,7 @@
             <li class="nav-item">
               <a class="nav-link" href="?page=contact">Contact</a>
             </li>
-			<li class="nav-item">
-              <a class="nav-link" href="?page=product_info&product=1">Productpagina (test)</a>
-            </li>
+			
 			<li class="nav-item">
               <a class="nav-link" href="?page=form_register">Registeren</a>
             </li>
