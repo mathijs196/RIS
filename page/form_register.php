@@ -11,7 +11,7 @@ FUNCTIES:
 
 
 
-<form method="post" action="register.php">
+<form method="post" action="?page=register">
 <fieldset>
 	<legend>Persoonlijke informatie: </legend>
 	<table>
@@ -30,7 +30,7 @@ FUNCTIES:
 		<legend>Accountgegevens:</legend>
 		<tr><td>Emailadres:*</td><td>	<input name="emailadres" type="text" placeholder="voorbeeld@voorbeeld.com" size="20" maxlength="40" required></td></tr>
 		<tr><td>Wachtwoord:*</td><td>	<input name="wachtwoord" type="password"  size="20" maxlength="20" required></td></tr>
-		<tr><td>	</td><td>			<input name="" type="text" size="30" maxlength="30" required></td></tr> 
+		
 	</table>
 </fieldset>	
 <br>
