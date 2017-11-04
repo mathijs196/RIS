@@ -70,7 +70,7 @@ include ('inc/db_connect.php');
         </div>
         <!-- /.col-lg-9 -->
 
-      </div>
+      
  <?php 
 		}
 	}else {

@@ -32,7 +32,9 @@ if (!empty($_POST)){
 				
 		while($row = mysqli_fetch_assoc($result)) {
 		echo "Je bent nu ingelogd als: ". $row['naam']. " ". $row['tussenvoegsel'] . " ". $row['achternaam'];
-		$_SESSION["naam"]=$row['naam'];
+		$_SESSION["naam"] = $row['naam'];
+		$_SESSION["tussenvoegsel"] = $row['tussenvoegsel'] ;
+		$_SESSION["achternaam"] = $row['achternaam'];
 		header('Location:?page=home');
 	}
 	

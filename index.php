@@ -74,7 +74,7 @@
 		include "page/home.php";
 		}
 	?>
-
+	</div>	
     </div>
     <!-- /.container -->
 

@@ -15,8 +15,8 @@ FUNCTIES:
 	<?php
 	session_start(); 
 	if(isset($_SESSION["emailadres"])){
-	echo "Je bent ingelogd als: ". $_SESSION["naam"];
-	echo "<br><a href='?page=uitloggen'>Uitloggen</a>";
+	echo "Je bent ingelogd als: ". $_SESSION["naam"]. $_SESSION["tussenvoegsel"]. $_SESSION["achternaam"];
+	echo "<br><br><a class='btn btn-success' href='?page=uitloggen'>Uitloggen</a>";
 	}else{
 	?>
 	<form method="post" action="?page=login">
@@ -28,6 +28,8 @@ FUNCTIES:
 	<input class="btn btn-success" type="submit" name="Submit" value="Inloggen">
 	<input class="btn btn-success" name="reset" type="reset" id="reset" value="Leegmaken">
 	</form>
+	<br>
+	<a href="?page=form_register">Maak een account aan</a>
 	<?php 
 	}
 	?>
