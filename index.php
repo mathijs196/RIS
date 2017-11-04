@@ -62,11 +62,18 @@
           <h1 class="my-4">RIS webshop</h1>
           <div class="list-group">
 		 
+			<?php
+			$query = 	"SELECT * FROM catogorie"; 
+					$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
+					
+					while($row = mysqli_fetch_assoc($result)){
+			?>
+            <a href="#" class="list-group-item"><?php echo $row['naam']; ?></a>
+            		
+			<?php
 		
-            <a href="#" class="list-group-item active">Category 1</a>
-            <a href="#" class="list-group-item">Category 2</a>
-            <a href="#" class="list-group-item">Category 3</a>
-			
+			}
+			?>
           </div>
         </div>
 	<?php 
