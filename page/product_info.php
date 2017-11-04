@@ -33,7 +33,15 @@ include ('inc/db_connect.php');
             <div class="card-body">
               <h3 class="card-title"><?php echo $row['naam'] ?></h3>
               <h4>&euro;<?php echo $row['prijs'] ?>,00</h4>
-              <p class="card-text">Op voorraad</p>
+              <p class="card-text"><?php 
+	$voorraad = $row['hoeveelheid'];
+		if($voorraad == 0){
+		echo "<i>Levertijd onbekend</i>";
+		}elseif($voorraad > 0 ){
+		echo "Levertijd: 1 tot 2 werkdagen";
+		}
+
+	?></p>
 			  <button class="btn btn-success">In winkelwagen</button>
               
               

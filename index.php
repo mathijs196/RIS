@@ -63,7 +63,7 @@ include 'page/layout_footer.php';
               <a class="nav-link" href="?page=contact">Contact</a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link" href="?page=product_info">Productpagina (test)</a>
+              <a class="nav-link" href="?page=product_info&product=1">Productpagina (test)</a>
             </li>
           </ul>
         </div>
