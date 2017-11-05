@@ -1,7 +1,5 @@
 <!-- FORM_REGISTER.PHP
 
-ERIK SMITH
-
 FUNCTIES:
 - Account aan kunnen maken
 - Gegevens worden in de database gezet

@@ -1,3 +1,10 @@
+<!-- INDEX.PHP
+
+FUNCTIES:
+- Header, sidebars en footer inladen
+
+-->
+
 <?php include 'inc/db_connect.php';?>
 
 <!DOCTYPE html>

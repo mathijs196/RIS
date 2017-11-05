@@ -1,7 +1,5 @@
 <!-- LOGIN.php
 
-ERIK SMITH
-
 FUNCTIES:
 - Form met als action de login_controle.php
 - Input gebruikersnaam en wachtwoord

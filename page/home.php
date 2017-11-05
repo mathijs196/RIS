@@ -1,3 +1,10 @@
+<!-- HOME.PHP
+
+FUNCTIES:
+- Weergeven van de producten
+- Mogelijk om te filteren via de sidebarcategorieën.
+
+-->
 <?php
 include 'inc/db_connect.php';
 

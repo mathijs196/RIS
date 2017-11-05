@@ -1,3 +1,9 @@
+<!-- FORGOTPASS.PHP
+
+FUNCTIES:
+
+-->
+
 <?php
 if (!empty($_POST)){
 	// databaseverbinding invoegen
