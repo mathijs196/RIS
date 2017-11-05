@@ -83,14 +83,16 @@ FUNCTIES:
 			?>
           </div>
         </div>
-	<?php 
-		if(!empty($_GET)){
-		$page = $_GET['page'];
-		include "page/$page.php";
-		}else{
-		include "page/home.php";
-		}
-	?>
+		
+		<?php 
+			if(!empty($_GET)){
+			$page = $_GET['page'];
+			include "page/$page.php";
+			}else{
+			include "page/home.php";
+			}
+		?>
+		
 	</div>	
     </div>
     <!-- /.container -->
