@@ -63,35 +63,37 @@ FUNCTIES:
 
     <!-- Page Content -->
     <div class="container">
-<div class="row">	
-		<div class="col-lg-3">
-		<?php include 'page/form_login.php' ?>
-          <br><br>
-          <div class="list-group">
-		 
-			<?php
-			$query = 	"SELECT * FROM catogorie"; 
-					$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
-					
-					while($row = mysqli_fetch_assoc($result)){
+		<div class="row">	
+			<div class="col-lg-3">
+			<?php include 'page/form_login.php' ?>
+			  <br><br>
+			  <div class="list-group">
+			 
+				<?php
+				$query = 	"SELECT * FROM catogorie"; 
+						$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
+						
+						while($row = mysqli_fetch_assoc($result)){
+				?>
+				<a href="?page=home&categorie=<?php echo $row['idcategorie']; ?>" class="list-group-item"><?php echo $row['naam']; ?></a>
+						
+				<?php
+			
+				}
+				?>
+			  </div>
+			</div>
+			
+			<?php 
+				if(!empty($_GET)){
+				$page = $_GET['page'];
+				include "page/$page.php";
+				}else{
+				include "page/home.php";
+				}
 			?>
-            <a href="?page=home&categorie=<?php echo $row['idcategorie']; ?>" class="list-group-item"><?php echo $row['naam']; ?></a>
-            		
-			<?php
-		
-			}
-			?>
-          </div>
-        </div>
-	<?php 
-		if(!empty($_GET)){
-		$page = $_GET['page'];
-		include "page/$page.php";
-		}else{
-		include "page/home.php";
-		}
-	?>
-	</div>	
+			
+		</div>	
     </div>
 	</div>
     <!-- /.container -->
@@ -100,7 +102,13 @@ FUNCTIES:
     <footer class="py-5 bg-dark">
       <div class="container">
 
+<<<<<<< HEAD
         <p class="m-0 text-center text-white">Copyright &copy; Ricks Interdimensional Shop 2017</p>
+=======
+        <p class="m-0 text-center text-white">Copyright &copy; Rick Sanchez</p>
+
+      
+>>>>>>> 66c9e89fe680ec2f74bd9878e1d176f188eb07a7
 
       </div>
       <!-- /.container -->
