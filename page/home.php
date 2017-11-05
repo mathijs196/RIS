@@ -1,8 +1,15 @@
 <?php
 include 'inc/db_connect.php';
 
-$query = 	"SELECT * FROM producten";
-$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
+ 
+
+	if(isset($_GET['categorie'])){
+	$query = 	"SELECT * FROM producten WHERE catogorie_idcatogorie = '" . $_GET["categorie"] ."';";
+	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
+	}else {
+	$query = 	"SELECT * FROM producten";
+	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
+	}
 
 while($row = mysqli_fetch_assoc($result)){
 ?>
@@ -14,7 +21,7 @@ while($row = mysqli_fetch_assoc($result)){
                   <h4 class="card-title">
                     <a href="?page=product_info&product=<?php echo $row['idproducten'];?>"><?php echo $row['naam'] ?></a>
                   </h4>
-                  <h5>&euro;<?php echo $row['prijs'] ?></h5>
+                  <h5>&euro;<?php echo $row['prijs'] ?>,00</h5>
                   <p class="card-text"><?php echo $row['omschrijving'] ?></p>
                 </div>
                 <div class="card-footer">

@@ -59,7 +59,7 @@
 <div class="row">	
 		<div class="col-lg-3">
 		<?php include 'page/form_login.php' ?>
-          <h1 class="my-4">RIS webshop</h1>
+          <br><br>
           <div class="list-group">
 		 
 			<?php
@@ -68,7 +68,7 @@
 					
 					while($row = mysqli_fetch_assoc($result)){
 			?>
-            <a href="#" class="list-group-item"><?php echo $row['naam']; ?></a>
+            <a href="?page=home&categorie=<?php echo $row['idcategorie']; ?>" class="list-group-item"><?php echo $row['naam']; ?></a>
             		
 			<?php
 		
@@ -91,7 +91,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Ricks Interdimensional Shop 2017</p>
       </div>
       <!-- /.container -->
     </footer>
