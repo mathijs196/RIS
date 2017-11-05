@@ -39,8 +39,8 @@ if (!empty($_POST)){
 	}
 	
 }else{
-  	$melding = "Opgegeven gebruikersnaam en/of wachtwoord incorrect";
-			die($melding);
+  	echo "Opgegeven gebruikersnaam en/of wachtwoord incorrect";
+			
 		}
 }else{
 	

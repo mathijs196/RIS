@@ -1,7 +1,5 @@
 <!-- PRODUCT_INFO.PHP
 
-ERIK SMITH
-
 FUNCTIES:
 - Weergeven van product
 
