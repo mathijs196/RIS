@@ -1,6 +1,8 @@
 <!-- FORGOTPASS.PHP
 
 FUNCTIES:
+- Emailadres in kunnen vullen
+- Wachtwoord emailen
 
 -->
 
