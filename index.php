@@ -93,16 +93,15 @@ FUNCTIES:
 	?>
 	</div>	
     </div>
+	</div>
     <!-- /.container -->
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-<<<<<<< HEAD
-        <p class="m-0 text-center text-white">Copyright &copy; Rick Sanchez</p>
-=======
+
         <p class="m-0 text-center text-white">Copyright &copy; Ricks Interdimensional Shop 2017</p>
->>>>>>> 921ee2e2d4fb2a910d1d6cb30e3295d59660ee07
+
       </div>
       <!-- /.container -->
     </footer>

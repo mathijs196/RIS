@@ -15,12 +15,19 @@ include 'inc/db_connect.php';
 	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
 	}else {
 	$query = 	"SELECT * FROM producten";
-	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
+	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error());	
 	}
+	$_SESSION['winkelmand'] = $winkelmand;
+	$winkelmand = array();
+	
+	
+	?>
 
+
+<?php
 while($row = mysqli_fetch_assoc($result)){
 ?>
-
+			
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
                 <a href="?page=product_info&product=<?php echo $row['idproducten'];?>"><img class="card-img-top" src="img/<?php echo $row['afbeelding'] ?>.png" style="height: 250px; width: 250px;" alt=""></a>
@@ -32,13 +39,14 @@ while($row = mysqli_fetch_assoc($result)){
                   <p class="card-text"><?php echo $row['omschrijving'] ?></p>
                 </div>
                 <div class="card-footer">
-                  <button class="btn btn-success">In winkelwagen</button> <a href="?page=product_info&product=<?php echo $row['idproducten'];?>" class="btn btn-success">Bekijk product</a>
+                  <a href="?page=cart&product=<?php echo $row['idproducten']?> "<button class="btn btn-success">In winkelwagen</button> </a> <a href="?page=product_info&product=<?php echo $row['idproducten'];?>" class="btn btn-success">Bekijk product</a>
                 </div>
               </div>
             </div>
+			
 
             
 
         
 	  
-<?php } ?>
+<?php } ?> 
