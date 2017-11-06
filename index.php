@@ -84,6 +84,8 @@ FUNCTIES:
 			  </div>
 			</div>
 			
+			
+			
 			<?php 
 				if(!empty($_GET)){
 				$page = $_GET['page'];
