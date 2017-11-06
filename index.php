@@ -57,6 +57,8 @@ FUNCTIES:
               <a class="nav-link" href="?page=form_register">Registeren</a>
             </li>
 			
+			
+			
 		
 
 			

@@ -36,6 +36,7 @@ if (!empty($_POST)){
 		$_SESSION["tussenvoegsel"] = $row['tussenvoegsel'] ;
 		$_SESSION["achternaam"] = $row['achternaam'];
 		$_SESSION["admin"] = $row['admin'];
+		
 		header('Location:?page=home');
 	}
 	
