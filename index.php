@@ -102,13 +102,8 @@ FUNCTIES:
     <footer class="py-5 bg-dark">
       <div class="container">
 
-<<<<<<< HEAD
-        <p class="m-0 text-center text-white">Copyright &copy; Ricks Interdimensional Shop 2017</p>
-=======
-        <p class="m-0 text-center text-white">Copyright &copy; Rick Sanchez</p>
 
-      
->>>>>>> 66c9e89fe680ec2f74bd9878e1d176f188eb07a7
+        <p class="m-0 text-center text-white">Copyright &copy; Ricks Interdimensional Shop 2017</p>
 
       </div>
       <!-- /.container -->
