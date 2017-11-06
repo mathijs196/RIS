@@ -59,6 +59,9 @@ FUNCTIES:
             <li class="nav-item">
                     <a class="nav-link" href="?page=form_product_aanpassen">Product aanpassen</a>
                   </li>
+                  <li class="nav-item">
+                          <a class="nav-link" href="?page=form_product_verwijderen">Product verwijderen</a>
+                        </li>
           </ul>
         </div>
       </div>
@@ -98,15 +101,19 @@ FUNCTIES:
 
 		</div>
     </div>
+	</div>
     <!-- /.container -->
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
 
-        <p class="m-0 text-center text-white">Copyright &copy; Rick Sanchez</p>
 
+<<<<<<< HEAD
 
+=======
+        <p class="m-0 text-center text-white">Copyright &copy; Ricks Interdimensional Shop 2017</p>
+>>>>>>> ff956396ddec1af6efd7ac135e91639a1116e737
 
       </div>
       <!-- /.container -->
