@@ -25,7 +25,7 @@ FUNCTIES:
     <!-- Custom styles for this template -->
     <link href="css/shop-homepage.css" rel="stylesheet">
 	<link href="css/contact.css" rel="stylesheet">
-	
+
 
   </head>
 
@@ -48,14 +48,17 @@ FUNCTIES:
             <li class="nav-item">
               <a class="nav-link" href="?page=over">Over</a>
             </li>
-            
+
             <li class="nav-item">
               <a class="nav-link" href="?page=contact">Contact</a>
             </li>
-			
+
 			<li class="nav-item">
               <a class="nav-link" href="?page=form_register">Registeren</a>
             </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="?page=form_product_aanpassen">Product aanpassen</a>
+                  </li>
           </ul>
         </div>
       </div>
@@ -63,28 +66,28 @@ FUNCTIES:
 
     <!-- Page Content -->
     <div class="container">
-		<div class="row">	
+		<div class="row">
 			<div class="col-lg-3">
 			<?php include 'page/form_login.php' ?>
 			  <br><br>
 			  <div class="list-group">
-			 
+
 				<?php
-				$query = 	"SELECT * FROM catogorie"; 
-						$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
-						
+				$query = 	"SELECT * FROM catogorie";
+						$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error());
+
 						while($row = mysqli_fetch_assoc($result)){
 				?>
 				<a href="?page=home&categorie=<?php echo $row['idcategorie']; ?>" class="list-group-item"><?php echo $row['naam']; ?></a>
-						
+
 				<?php
-			
+
 				}
 				?>
 			  </div>
 			</div>
-			
-			<?php 
+
+			<?php
 				if(!empty($_GET)){
 				$page = $_GET['page'];
 				include "page/$page.php";
@@ -92,8 +95,8 @@ FUNCTIES:
 				include "page/home.php";
 				}
 			?>
-			
-		</div>	
+
+		</div>
     </div>
     <!-- /.container -->
 
@@ -103,7 +106,7 @@ FUNCTIES:
 
         <p class="m-0 text-center text-white">Copyright &copy; Rick Sanchez</p>
 
-      
+
 
       </div>
       <!-- /.container -->
