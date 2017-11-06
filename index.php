@@ -56,21 +56,21 @@ FUNCTIES:
 			<li class="nav-item">
               <a class="nav-link" href="?page=form_register">Registeren</a>
             </li>
-<<<<<<< HEAD
+
             <li class="nav-item">
                     <a class="nav-link" href="?page=form_product_aanpassen">Product aanpassen</a>
                   </li>
                   <li class="nav-item">
                           <a class="nav-link" href="?page=form_product_verwijderen">Product verwijderen</a>
                         </li>
-=======
+
 			
 			<li class="nav-item">
               <a class="nav-link" href="?page=form_product">Product Toevoegen</a>
             </li>
 
 			
->>>>>>> 57862a0adb3496ac21d42084a462c41079dce7b3
+
           </ul>
         </div>
       </div>
@@ -98,15 +98,10 @@ FUNCTIES:
 				?>
 			  </div>
 			</div>
-<<<<<<< HEAD
+
 
 			<?php
-=======
-			
-			
-			
-			<?php 
->>>>>>> 57862a0adb3496ac21d42084a462c41079dce7b3
+		
 				if(!empty($_GET)){
 				$page = $_GET['page'];
 				include "page/$page.php";
@@ -125,11 +120,11 @@ FUNCTIES:
       <div class="container">
 
 
-<<<<<<< HEAD
 
-=======
+
+
         <p class="m-0 text-center text-white">Copyright &copy; Ricks Interdimensional Shop 2017</p>
->>>>>>> ff956396ddec1af6efd7ac135e91639a1116e737
+
 
       </div>
       <!-- /.container -->
