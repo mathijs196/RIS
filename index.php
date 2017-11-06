@@ -56,18 +56,8 @@ FUNCTIES:
 			<li class="nav-item">
               <a class="nav-link" href="?page=form_register">Registeren</a>
             </li>
-
-            <li class="nav-item">
-                    <a class="nav-link" href="?page=form_product_aanpassen">Product aanpassen</a>
-                  </li>
-                  <li class="nav-item">
-                          <a class="nav-link" href="?page=form_product_verwijderen">Product verwijderen</a>
-                        </li>
-
 			
-			<li class="nav-item">
-              <a class="nav-link" href="?page=form_product">Product Toevoegen</a>
-            </li>
+		
 
 			
 

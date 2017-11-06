@@ -9,7 +9,7 @@ FUNCTIES:
 
 <?php
 
-	if(isset($_SESSION['admin'])){
+	if($_SESSION['admin'] == 0){
 	echo "je hebt hier geen rechten voor" ;
 	}else{
 
