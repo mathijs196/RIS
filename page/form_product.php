@@ -1,10 +1,9 @@
 
 
-<!-- FORM_REGISTER.PHP
+<!-- form_product.PHP
 
 FUNCTIES:
-- Account aan kunnen maken
-- Gegevens worden in de database gezet
+- Product in database zetten
 - Per 'Categorie' ingedeeld d.m.v. fieldset
 
 -->
