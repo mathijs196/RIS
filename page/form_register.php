@@ -10,14 +10,28 @@ FUNCTIES:
 <?php 
 
 	if(isset($_SESSION['naam'])){
-	echo "Je hebt al een account en je bent ingelogd als: ". $_SESSION["naam"]." ". $_SESSION["tussenvoegsel"]. " ". $_SESSION["achternaam"] ;
-	}else{ 
+?>	
+<div class="col-lg-9">
+	<div width="830px; "class="card card-outline-secondary my-4">
+				<div class="card-header">
+				  Al ingelogd!
+				</div>
+				<div class="card-body">
+				 
+<?php	echo "<b>(!) Je hebt al een account en je bent ingelogd als: ". $_SESSION["naam"]."</b>"	;
+	
+?>	
+
+				</div>
+	</div>
+</div>		
+<?php }else{ 
 	
 	?>
 <div class="col-lg-9">
 	<div class="card card-outline-secondary my-4">
 				<div class="card-header">
-				  Contact Pagina
+				  Registratie pagina
 				</div>
 				<div class="card-body">
 				 

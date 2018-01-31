@@ -56,12 +56,7 @@ FUNCTIES:
 			<li class="nav-item">
               <a class="nav-link" href="?page=form_register">Registeren</a>
             </li>
-			
-			
-			
 		
-
-			
 
           </ul>
         </div>

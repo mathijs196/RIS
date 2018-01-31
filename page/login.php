@@ -29,10 +29,11 @@ if (!empty($_POST)){
 				$_SESSION["auth"]=true;
 				$_SESSION["timeout"]=time() + 120; 
 				$_SESSION["emailadres"]=$emailadres;
+				$_SESSION["functie"] = $row['functies_idfuncties'];
 				
 		while($row = mysqli_fetch_assoc($result)) { 
 		$_SESSION["naam"] = $row['naam'];
-		$_SESSION["functie"] = $row['functies_idfuncties'];
+		
 		
 		header('Location:?page=home');
 	}

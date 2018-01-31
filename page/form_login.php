@@ -15,6 +15,36 @@ FUNCTIES:
 	if(isset($_SESSION["emailadres"])){
 	echo "Je bent ingelogd als: <br>". $_SESSION["naam"];
 	echo "<br><br><a class='btn btn-success' href='?page=uitloggen'>Uitloggen</a><br><br>";
+		
+		switch($_SESSION["functie"]){
+			case 0:
+?>
+<h4> Menu voor logistiek</h4>
+<a href="#">Link 1</a><br>
+<a href="#">Link 2</a><br>
+<a href="#">Link 3</a><br>
+
+<?php			
+			break;
+			case 1:
+?>
+<h4> Menu voor Functie 1</h4>
+<a href="#">Link 1</a><br>
+<a href="#">Link 2</a><br>
+<a href="#">Link 3</a><br>
+
+<?php
+			break;
+			case 2: 
+			?>
+<h4> Menu voor Functie 2</h4>
+<a href="#">Link 1</a><br>
+<a href="#">Link 2</a><br>
+<a href="#">Link 3</a><br>
+
+<?php
+			break;
+		}	
 	}else{
 	?>
 	<form method="post" action="?page=login">
