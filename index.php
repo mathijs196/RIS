@@ -17,7 +17,7 @@ FUNCTIES:
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Ricks Interdimensional Shop | RIS</title>
+    <title>IT Solutions </title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
