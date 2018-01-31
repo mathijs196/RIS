@@ -1,4 +1,4 @@
-<!-- INDEX.PHP
+<  !-- INDEX.PHP
 
 FUNCTIES:
 - Header, sidebars en footer inladen
@@ -74,21 +74,7 @@ FUNCTIES:
 			<div class="col-lg-3">
 			<?php include 'page/form_login.php' ?>
 			  <br><br>
-			  <div class="list-group">
-
-				<?php
-				$query = 	"SELECT * FROM catogorie";
-						$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error());
-
-						while($row = mysqli_fetch_assoc($result)){
-				?>
-				<a href="?page=home&categorie=<?php echo $row['idcategorie']; ?>" class="list-group-item"><?php echo $row['naam']; ?></a>
-
-				<?php
-
-				}
-				?>
-			  </div>
+			  
 			</div>
 
 
@@ -115,7 +101,7 @@ FUNCTIES:
 
 
 
-        <p class="m-0 text-center text-white">Copyright &copy; Ricks Interdimensional Shop 2017</p>
+        <p class="m-0 text-center text-white">Copyright &copy; IT Solutions 2018</p>
 
 
       </div>
