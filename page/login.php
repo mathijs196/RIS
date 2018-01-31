@@ -20,8 +20,8 @@ if (!empty($_POST)){
 	
 	$emailadres = mysqli_real_escape_string($db, $_POST['emailadres']);
 	$wachtwoord = mysqli_real_escape_string($db, $_POST['wachtwoord']);
-	$query = 	"SELECT * FROM gebruiker 
-				WHERE emailadres ='" . $_POST["emailadres"] ."'
+	$query = 	"SELECT * FROM gebruikers 
+				WHERE email ='" . $_POST["emailadres"] ."'
 				AND wachtwoord='" . $_POST["wachtwoord"] ."'"; 
 	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error()); 
 	
@@ -30,12 +30,9 @@ if (!empty($_POST)){
 				$_SESSION["timeout"]=time() + 120; 
 				$_SESSION["emailadres"]=$emailadres;
 				
-		while($row = mysqli_fetch_assoc($result)) {
-		echo "Je bent nu ingelogd als: ". $row['naam']. " ". $row['tussenvoegsel'] . " ". $row['achternaam'];
+		while($row = mysqli_fetch_assoc($result)) { 
 		$_SESSION["naam"] = $row['naam'];
-		$_SESSION["tussenvoegsel"] = $row['tussenvoegsel'] ;
-		$_SESSION["achternaam"] = $row['achternaam'];
-		$_SESSION["admin"] = $row['admin'];
+		$_SESSION["functie"] = $row['functies_idfuncties'];
 		
 		header('Location:?page=home');
 	}
