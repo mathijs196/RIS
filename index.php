@@ -34,8 +34,8 @@ FUNCTIES:
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-         <a class="navbar-brand" href="?page=home"><img src="img/logo.png" style="display: inline-block; height: 100px; width: 100px;"></a>
-		<a class="navbar-brand" href="?page=home">Ricks Interdimensional Shop</a>
+         <a class="navbar-brand" href="?page=home">IT SOLUTIONS </a>
+		<a class="navbar-brand" href="?page=home"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
