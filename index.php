@@ -1,4 +1,4 @@
-<  !-- INDEX.PHP
+<!-- INDEX.PHP
 
 FUNCTIES:
 - Header, sidebars en footer inladen
